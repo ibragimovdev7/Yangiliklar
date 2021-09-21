@@ -1,0 +1,44 @@
+.panel{
+    box-shadow: 1px 1px 4px 2px gray;
+    padding: 15px;
+    margin: 10px auto;
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.panel h2{
+    text-align: center;
+}
+.container li {
+    list-style: none;
+}
+.panel:hover{
+    color: white;
+    background-color: brown;
+}
+.panel:hover a{
+    color: cadetblue;
+
+}
+.pic{
+    width: 100%;
+    height: auto;
+    position: relative;
+
+
+}
+.menu ul li {
+    list-style-type: none;
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+}
+        .menu ul li a {
+          text-decoration: none;
+        }
+      .menu ul {
+          background: aquamarine;
+
+      }
+

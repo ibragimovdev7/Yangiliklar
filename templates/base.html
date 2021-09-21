@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Birinchi sahifa</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+</head>
+<body>
+<nav class="menu" >
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">For Us</a></li>
+        <li><a href="{% url 'add_news' %}">Yangilik qo`shish</a></li>
+    </ul>
+</nav>
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>
