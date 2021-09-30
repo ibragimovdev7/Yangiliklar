@@ -1,44 +1,82 @@
 .panel{
-    box-shadow: 1px 1px 4px 2px gray;
-    padding: 15px;
+   
+    /* padding: 15px;
     margin: 10px auto;
     width: 70%;
-    height: auto;
+    height: auto; */
     border-radius: 10px;
+    transition: .3s;
 
 }
-.panel h2{
+.menu ul li a{
+    font-weight: 600;
+    font-size: 20px;
+}
+h1{
+    /* transform: translateX(95px); */
+}
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+/*}*/
+/*.menu ul li {*/
+/*    list-style-type: none;*/
+/*	display: inline-block;*/
+/*	margin: 5px;*/
+/*	padding: 5px;*/
+/*}*/
+/*.menu ul li a {*/
+/*    text-decoration: none;*/
+/*}*/
+/*.menu ul {*/
+/*    background: aquamarine;*/
+
+/*}*/
+
+.menu{
+    display: block;
+
+}
+.Bosh_sahifa{
+    display: inline;
+    margin-left: auto;
+    border: 2px solid red;
     text-align: center;
 }
-.container li {
-    list-style: none;
+
+
+.my-form label{
+    display: block;
+    font-size: 22px;
+    color: #555;
+    font-family: "Times New Roman";
 }
-.panel:hover{
-    color: white;
-    background-color: brown;
-}
-.panel:hover a{
-    color: cadetblue;
+
+.my-form input  {
+    margin: 5px 0;
+    padding: 10px;
+    width: 90%;
 
 }
-.pic{
-    width: 100%;
+.my-form textarea{
+    margin: 5px 0;
+    padding: 10px;
+    width: 90%;
     height: auto;
-    position: relative;
-
 
 }
-.menu ul li {
-    list-style-type: none;
-	display: inline-block;
-	margin: 5px;
-	padding: 5px;
+
+.button-class{
+    margin: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #222;
+    padding: 5px 15px;
+    border-radius: 7px;
 }
-        .menu ul li a {
-          text-decoration: none;
-        }
-      .menu ul {
-          background: aquamarine;
-
-      }
-
+.button-class:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #222;
+}

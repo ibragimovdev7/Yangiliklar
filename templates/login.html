@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html">Log In</h1>
+
+</div><div class="my-form">
+        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Enter your username">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter your password">
+            <br>
+
+             <button class="button-class" type="submit">LogIn</button>
+        </form>
+{% endblock content %}

@@ -1,10 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Yanggilik qo`shish</h1>
-<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
-    <table>
-        {{form}}
-    </table>
-    <button type="submit">Send</button>
-</form>
+<h1>Yangilik qo`shish</h1>
+
+</div><div class="my-form">
+        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <label>Title</label>
+            <input class="in-1" type="text" name="title" placeholder="Bu yerga mavzu kiriting">
+
+             <label>Image</label>
+             <input class="in-2" type="file" name="image">
+
+             <label>Text</label>
+             <textarea class="tx-3" name="text" placeholder="Bu yerga matn kiriting"></textarea>
+
+             <label>Tag</label>
+             <input class="in-4" type="text" name="tag">
+            <br>
+
+             <button class="button-class" type="submit">Send</button>
+        </form>
 {% endblock content %}

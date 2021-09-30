@@ -5,22 +5,61 @@
     <meta charset="UTF-8">
     <title>Birinchi sahifa</title>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
 
 </head>
 <body>
-<nav class="menu" >
-    <ul>
-        <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">For Us</a></li>
-        <li><a href="{% url 'add_news' %}">Yangilik qo`shish</a></li>
+<nav class="menu d-flex justify-content-between bg-primary py-2 mb-2" >
+    <ul class="d-flex justify-content-beetwen " >
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" class="fist" href="{% url 'index' %}">Home</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" href="#">About</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" href="#">Contact</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" href="siyosat">Siyosat</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" href="#">Help</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" href="#">For Us</a></li>
+
+    </ul>
+
+    <ul class="d-flex justify-content-beetwen ">
+    {% if request.user != 'AnonymousUser' %}
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" href="#">{{request.user.username}}</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" class="finish" href="{% url 'logout' %}">Log out</a></li>
+
+    {% else %}
+
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" class="finish" href="{% url 'registration' %}">Sign up</a></li>
+        <li class="list-unstyled  pr-2"><a class="text-light text-decoration-none" class="finish" href="{% url 'login' %}">Log In</a></li>
+
+
+    {% endif %}
     </ul>
 </nav>
+        <li class="list-unstyled float-right pr-2 mt-2"><a class="text-light btn btn-success text-decoration-none" href="{% url 'add_news' %}">Yangilik qo`shish</a></li>
+
+    {% comment %} <div class="panel">
+               <a href="{{new.id}}"><h2>{{ new.title }}</h2></a>
+                <img class="pic" src="{{new.imageURL}}">
+                <p>{{ new.text }}</p>
+
+                <a href="#">{{ new.tag }}</a>
+            </div>
+    <div class="card w-75">
+        <div class="card-body">
+        <a href="{{new.id}}"><h2 class="text-center">{{ new.title }}</h2></a>
+                <img class="pic" src="{{new.imageURL}}">
+                <p>{{ new.text }}</p>
+
+                <a href="#">{{ new.tag }}</a>
+        </div>
+    </div> {% endcomment %}
+
+
+
 
 {% block content %}
 {% endblock content %}
+
 
 </body>
 </html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><h1>Bosh sahifa</h1></center>
+<ul type="circle">
+    <div class="container">
+
+        <li>
+            <div class="panel">
+              <h2>{{ new.title }}</h2>
+                <img class="pic" src="{{new.imageURL}}">
+                <p>{{ new.text }}</p>
+
+                <a href="#">{{ new.tag }}</a>
+            </div>
+        </li>
+
+    </div>
+</ul>
+{% endblock content %}
+
+
+

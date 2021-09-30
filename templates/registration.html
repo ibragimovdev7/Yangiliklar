@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html">Ro`yxatdan o`tish</h1>
+
+</div><div class="my-form">
+        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Enter username">
+
+          <label>First Name</label>
+          <input type="text" name="firsr_name" placeholder="Enter first name">
+
+          <label>Last Name</label>
+          <input type="text" name="last_name" placeholder="Enter last name">
+
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Enter email">
+
+          <label>Password</label>
+          <input type="password" name="password1" placeholder="Enter password">
+
+          <label>Password confirmation</label>
+          <input type="password" name="password2" placeholder="Enter password again">
+
+            <br>
+
+             <button class="button-class" type="submit">Send</button>
+        </form>
+{% endblock content %}
